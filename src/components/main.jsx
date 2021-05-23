@@ -5,6 +5,7 @@ import navBar from './navbar';
 import Paragrath from './paragrath';
 import React_logo from './React_logo';
 import Title from './title';
+import logo from "../logo-small.ede75a6b.svg";
 
 const mainComponent = () => {
 
@@ -13,7 +14,7 @@ const mainComponent = () => {
             <Title content = "CRUD app"/>
             <Paragrath className = "move2 alpha" content = "This is a app with NestJs and react in the web version, made by danixl30." />
             <React_logo className = "move2 alpha"/>
-            <img style = {{marginTop: "0px"}} className = "move2" src = "logo-small.ede75a6b.svg" width = "200"></img>
+            <img style = {{marginTop: "0px"}} className = "move2" src = {logo} width = "200"></img>
         </div>
     )
 }
