@@ -26,19 +26,18 @@ function App() {
     <div className="App">
       
       <Router>
-      <Navegation/>
-      <div className = "containerAll">
-        <ToastContainer/>
+      <Navegation/>      
         <Switch>
-          {/* <Route path = "/" component = {navBar}/>           */}
+        <div className = "containerAll">
+          <ToastContainer/>          
           <Route path= "/" exact component={mainComponent}/>
           <Route path = "/user/login" component={Login} />
           <Route path = "/user/signup" component = {Signup}/>
           <Route path = "/home" exact component = {Home}/>
           <Route path = "/newnote" component = {Create}/>
-          <Route path = "/edit/:id" component = {Edit}/>    
-        </Switch>
-      </div>
+          <Route path = "/edit/:id" component = {Edit}/>
+        </div>    
+        </Switch> 
         
       <Footer/>             
       </Router>
