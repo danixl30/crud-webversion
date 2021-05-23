@@ -57,7 +57,7 @@ const Home = () => {
     if(!notes){
         getNotes();
     }
-    console.log(notes)
+    //console.log(notes)
     return(
         <div >
             <Title content = "Home"/>
