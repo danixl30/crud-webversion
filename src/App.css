@@ -1,3 +1,178 @@
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  scrollbar-dark-shadow-color: #646464;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+
+:root {
+  color-scheme: dark;
+}
+
+.cardBody{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.createEdit{
+  align-items: center;
+  justify-content: center;
+}
+
+.courses-container {
+	
+}
+
+.noteForm{
+  border-radius: 10px;  
+  margin-left: 38%;
+	overflow: hidden;
+	width: 350px;
+  border-color: rgb(0, 81, 255);
+  align-items: center;
+	justify-content: center;
+  border: 2px solid rgb(0, 119, 255);
+}
+
+.content{
+  width: 350px;
+  text-align: center;
+  overflow: auto;
+}
+
+.course {
+	background-color: rgb(20, 72, 121);
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: auto;
+	width: 700px;
+  height: auto;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 5px 0;
+}
+
+.course-preview {
+	background-color: #320347;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.titles{
+  animation: move1 1s ease;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-info {
+  color: #fff;
+	padding: 30px;
+	position: relative;
+	width: 65%;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.progress-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-align: right;
+	width: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 5px;
+	width: 100%;
+}
+
+.progress::after {
+	border-radius: 3px;
+	background-color: #2A265F;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 66%;
+}
+
+.progress-text {
+	font-size: 10px;
+	opacity: 0.6;
+	letter-spacing: 1px;
+}
+
+.btn {
+	background-color: transparent;
+	border: 0;
+	/*border-radius: 50px; */
+	/* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); */
+	color: #fff;
+	font-size: 16px;
+	padding: 6px 16px;
+	position: sticky;
+	/* bottom: 30px; */
+	right: 30px;
+	letter-spacing: 1px;
+}
+
+.btn:hover{
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(57, 0, 131);
+  animation-name: selectionEditDelete;
+  animation-duration: 4s infinite;
+}
+
+@keyframes selectionEditDelete {
+  to {background-color: blue;}
+}
+
+img:hover{
+  border: 10px #fff;
+}
+
+body {
+  color: #61dafb;
+}
+
 .App {
   text-align: center;
 }
@@ -28,6 +203,145 @@
   color: #61dafb;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(32, 100, 189);
+}
+
+li {
+  float: left;
+  transition: width 2s;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;  
+  /* transition: width 2s; */
+  
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  content: '\00bb';
+  /* background-color: rgb(48, 78, 248); */
+  width: 50px;
+  animation-name: selection;
+  animation-duration: 1.5s infinite;
+}
+
+@keyframes selection {
+  to {background-color: rgb(100, 170, 250);}
+  to {box-shadow: 0px 0px 10px 0px rgba(160, 160, 160, 0.24), 0px 0px 15px 0px rgba(255, 255, 255, 0.19);}
+  to {width: 100px;}
+}
+
+img {
+  background-color: transparent;
+}
+
+button{
+  border: 2px solid rgb(153, 0, 255);
+  border-radius: 5px;
+  padding-top: 10x;
+  padding-bottom: 20px;
+  border-color: rgb(153, 0, 255);
+  background-color: rgb(31, 31, 31);
+  color: rgb(167, 55, 241);
+  cursor: pointer;
+  font-size: medium;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  margin: 4px 2px;
+  padding: 7px 16px;
+}
+
+button:hover{
+  animation: animButton infinite 4s;
+  /* animation-duration: ; */
+  
+}
+
+button::after{
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+button:active::afterS {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+input{
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid rgb(166, 34, 241);
+  border-radius: 4px;
+  color: rgb(204, 0, 255);
+  background-color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:focus{
+  border: 2px solid rgb(190, 83, 252);  
+}
+
+textarea{
+  height: 150px;
+  padding: 12px 20px;
+  border: 1px solid rgb(166, 34, 241);
+  border-radius: 4px;
+  background-color: #000000;
+  font-size: 16px;
+  color: #f8f8f8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: auto;
+  resize: none;
+}
+
+textarea:focus{
+  border: 2px solid rgb(190, 83, 252);  
+}
+
+footer{
+  background-color: rgb(37, 37, 37);
+  padding: 20px;
+  display: block;
+  clear: both;
+  /* position: absolute;
+  width: 100%; */
+  bottom: 0;
+}
+
+.containerAll{
+  /* padding-bottom: 50x; */
+  min-height: calc(100vh - 135px);
+}
+
+@keyframes animButton {
+  to {border-color: rgb(7, 108, 223);}
+  to {box-shadow: 0px 0px 10px 0px rgba(160, 160, 160, 0.24), 0px 0px 15px 0px rgba(255, 255, 255, 0.19);}
+  to {color: rgb(7, 108, 223);}
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +349,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes move1 {
+  0%{
+    /* transform: translate(100%); */
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.move2{
+  animation: move2 1s;  
+}
+
+/* .alpha{
+  animation-name: alpha1;
+  animation-duration: 1s;
+} */
+
+@keyframes move2 {  
+  0%{ 
+    transform: translateY(-15%);  
+     opacity: 0;  
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1; 
+  }
+}
+
+.cardanim{
+  animation: movecard 1s;
+}
+
+@keyframes movecard {
+  0%{
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+}
+
+@keyframes alpha1 {
+  0%{
+    
+  }
+  
 }
